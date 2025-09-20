@@ -5,6 +5,7 @@ import path from 'node:path';
 // Proxy API to the syncer service during dev
 export default defineConfig({
   plugins: [vue()],
+  base: '/budget-web/',
   server: {
     host: true, // same as --host
     port: 5173,
