@@ -6,16 +6,6 @@ import path from 'node:path';
 export default defineConfig({
   plugins: [vue()],
   base: '/budget-web/',
-  server: {
-    host: true, // same as --host
-    port: 5173,
-    proxy: {
-      '/api': {
-        target: process.env.VITE_API_BASE_URL || 'http://localhost:3302',
-        changeOrigin: true,
-      },
-    },
-  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

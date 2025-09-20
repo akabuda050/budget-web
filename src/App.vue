@@ -605,7 +605,7 @@ async function recalcDraft() {
         }));
 
 
-        const response = await fetch('/api/summary/recalculate', {
+        const response = await fetch('https://qp5njtfsfj.execute-api.eu-north-1.amazonaws.com/dev/api/summary/recalculate', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
